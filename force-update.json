@@ -1,5 +1,6 @@
 {
   "minimumRequiredVersion": "1.0",
+  "minimumRequiredBuild": "5",
   "latestVersion": "1.0",
   "appStoreURL": "https://apps.apple.com/app/id0000000000",
   "title": "업데이트가 필요해요",
