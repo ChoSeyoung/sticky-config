@@ -1,0 +1,140 @@
+/* sticky support pages — paper-and-ink palette mirroring the app */
+:root {
+  --paper:        #F4E9D0;
+  --paper-elev:   #FBF3DD;
+  --ink:          #1C1A17;
+  --ink-2:        #4A453B;
+  --ink-3:        #857F73;
+  --accent:       #D7392E;
+  --border:       #1C1A17;
+  --rule:         rgba(28, 26, 23, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+               "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.hero {
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.hero .lede {
+  font-size: 19px;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 56ch;
+}
+
+section {
+  background: var(--paper-elev);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  margin: 0 0 24px;
+}
+
+section h2 {
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+section p { margin: 0 0 12px; }
+section p:last-child { margin-bottom: 0; }
+
+section ul {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+section li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+}
+a:hover { opacity: 0.78; }
+
+.muted { color: var(--ink-3); }
+
+.contact {
+  font-size: 19px;
+  margin-top: 8px;
+}
+.contact a { font-weight: 600; }
+
+details {
+  border-top: 1px solid var(--rule);
+  padding: 14px 0;
+}
+details:first-of-type { border-top: 0; padding-top: 4px; }
+details:last-of-type { padding-bottom: 0; }
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 28px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 400;
+  color: var(--ink-3);
+  transition: transform 120ms ease;
+}
+details[open] summary::after { content: "−"; }
+
+details p {
+  margin-top: 10px;
+  color: var(--ink-2);
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #2A2520;
+    --paper-elev: #352F28;
+    --ink:        #F2E6CA;
+    --ink-2:      #C9BFA6;
+    --ink-3:      #928876;
+    --accent:     #E85248;
+    --border:     #F2E6CA;
+    --rule:       rgba(242, 230, 202, 0.18);
+  }
+}
